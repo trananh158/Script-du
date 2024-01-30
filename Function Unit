@@ -1,0 +1,7 @@
+============================= Spawn Unit ==========================
+  - Nhận dữ liệu:
+		+ Id random
+    + Id Name
+  - Kiểm tra dữ liệu
+    + Kiểm tra dữ kiệu từ người chơi xem Id_random với Id_Name đã đúng chưa
+    +
