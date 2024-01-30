@@ -1,7 +1,29 @@
 ============================= Spawn Unit ==========================
-  - Nhận dữ liệu:
+	- Nhận dữ liệu:
 		+ Id random
-    + Id Name
-  - Kiểm tra dữ liệu
-    + Kiểm tra dữ kiệu từ người chơi xem Id_random với Id_Name đã đúng chưa
-    +
+		+ Id Name
+		+ Position
+	- Kiểm tra dữ liệu
+		+ Kiểm tra dữ kiệu từ người chơi xem Id_random với Id_Name đã đúng chưa
+		+ Kiểm tra part_unit đã load trong server chưa, chưa thì load vào
+	- Clone unit từ thư mục ra:
+		+ Parent = Parent.Unit
+		+ Gán dữ liệu vào
+		+ Thư mục stats:
+			~ Damage
+			~ Buff_Attack
+
+			~ AttackSpeed
+			~ Buff_Speed
+
+			~ RangeAttack
+			~ Buff_Range
+
+		+ Thư mục info:
+			~ Level = 0
+			~ TypeAttack
+=========================== Loop Attack ==========================
+	- Nhận dữ liệu:
+		+ Unit
+	- Gọi Function Check_Hit_Box()
+	- Gọi Function VFX_Skill()
