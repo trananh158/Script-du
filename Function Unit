@@ -22,8 +22,17 @@
 		+ Thư mục info:
 			~ Level = 0
 			~ TypeAttack
+			~ Type_Target = First
 =========================== Loop Attack ==========================
 	- Nhận dữ liệu:
 		+ Unit
-	- Gọi Function Check_Hit_Box()
+	- Gọi Function Check_Hit_Box(Unit)
+	- Gọi Damage_mods(Unit, ArrayMods)
 	- Gọi Function VFX_Skill()
+=========================== Check_Hit_Box =========================
+	- Nhận dữ liệu:
+		+ Unit
+	- Nếu Unit.info.TypeAttack = AOE:
+		+ Lấy tất cả Mods trong tầm Unit.stats.RangeAttack
+	- Đưa dữ liệu ra
+		+ ArrayMods = []
